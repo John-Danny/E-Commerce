@@ -26,7 +26,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="w-full h-12 bg-surface-black sticky top-0">
+    <header className="w-full h-12 bg-surface-black sticky top-0 z-100">
       <div className="max-w-300 h-full mx-auto">
         <nav className="h-full px-4 py-2 text-canvas flex items-center justify-between ">
           <span className="md:hidden">
