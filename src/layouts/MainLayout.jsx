@@ -4,7 +4,7 @@ import Footer from "@/components/common/Footer";
 
 export default function MainLayout() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col overflow-x-clip">
       {/* Navbar */}
       <Navbar />
       <main className="">
