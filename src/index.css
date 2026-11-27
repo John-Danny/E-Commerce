@@ -1,1 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  /* 1. Semantic color */
+  /* brand */
+  --color-primary: #0066cc;
+  --color-primary-focus: #0071e3;
+
+  /* FeedBack */
+  --color-success: #1e8e3e;
+  --color-success-container: #e6f4ea;
+  --color-error: #d93025;
+  --color-error-container: #fce8e6;
+
+  /* Text */
+  --color-body: #1d1d1f;
+  --color-ink: #1d1d1f;
+  --color-ink-muted-80: #333333;
+  --color-ink-muted-48: #6e6e73;
+  --color-body-muted: #cccccc;
+
+  /* Background */
+  --color-canvas: #ffffff;
+  --color-canvas-parchment: #f5f5f7;
+  --color-surface-pearl: #fafafc;
+  --color-surface-black: #000000;
+
+  /* Borders */
+  --color-border: #e0e0e0;
+  --color-divider-soft: #f0f0f0;
+
+  /* 2. Text size*/
+  /* Heading */
+  --text-hero: clamp(56px, 3vw + 28px, 60px);
+  --text-display-lg: 40px;
+  --text-display-md: 34px;
+  --text-tag-line: 21px;
+
+  /* Body */
+  --text-lead: 28px;
+  --text-lead-airy: 24px;
+  --text-body: 17px;
+
+  /* Interact */
+  --text-button-lg: 18px;
+  --text-button-utility: 14px;
+  --text-nav-link: 12px;
+
+  /* Caption */
+  --text-caption: 14px;
+  --text-fine-print: 12px;
+
+  /* Text font */
+  --font-inter: "Inter", sans-serif;
+
+  /* 3. Radius */
+  --radius-xs: 5px;
+  --radius-sm: 8px;
+  --radius-md: 11px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  body {
+    @apply font-inter;
+  }
+}
