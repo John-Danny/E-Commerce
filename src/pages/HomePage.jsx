@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import banner from "@/assets/images/banner-clothing.jpg";
 import pattern from "@/assets/images/modern-pattern.jpg";
 import ProductList from "@/features/products/components/ProductList";
+import Button from "@/components/ui/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function HomePage() {
   return (
@@ -21,9 +24,9 @@ export default function HomePage() {
                 Những sản phẩm được chọn lọc dành riêng cho bạn
               </p>
             </div>
-            <button className="w-full h-12 text-center text-canvas bg-primary rounded-full cursor-pointer hover:bg-primary-focus">
+            <Button className="w-full">
               <Link to="/products">Khám phá ngay</Link>
-            </button>
+            </Button>
 
             <div className="w-full mt-4 rounded-lg overflow-hidden shadow-xl">
               <img
@@ -36,7 +39,26 @@ export default function HomePage() {
         </div>
       </section>
       {/* 2. Products */}
-      <ProductList />
+      <section className="mb-8">
+        <div className="max-w-300 mx-auto px-4 py-6">
+          <div className="w-full flex flex-col gap-4">
+            <div className="w-full">
+              <h2 className="text-display-md font-bold">Sản phẩm nổi bật</h2>
+              <p className="text-body">
+                Khám phá những lựa chọn được yêu thích
+              </p>
+            </div>
+            <ProductList />
+            <Link
+              to="/products"
+              className="text-center text-primary hover:text-primary-focus hover:underline"
+            >
+              Xem tất cả sản phẩm
+              <FontAwesomeIcon icon={faChevronRight} />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* 3. Pattern */}
       <section className="bg-[#272729]">
@@ -48,9 +70,9 @@ export default function HomePage() {
             Trải nghiệm không gian làm việc gọn gàng với thế hệ thiết bị không
             dây <br></br>mới nhất.
           </p>
-          <button className="w-fit px-6 py-4 text-center text-canvas bg-primary rounded-full cursor-pointer hover:bg-primary-focus">
+          <Button>
             <Link to="/products">Mua sắm ngay</Link>
-          </button>
+          </Button>
 
           <div class="w-full rounded-xl overflow-hidden">
             <img
